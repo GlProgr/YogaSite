@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Студия йоги - гармония души и тела. Запишитесь на первое занятие и начните свой путь к здоровью.">
+    <title>Yoga Studio | Студия йоги и медитации</title>
+
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Навигация -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <div class="logo">Yoga<span>Studio</span></div>
+
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">О нас</a></li>
+                    <li><a href="#classes" class="nav-link">Направления</a></li>
+                    <li><a href="#location" class="nav-link">Как найти</a></li>
+                    <li><a href="#contact" class="btn btn-outline nav-link">Записаться</a></li>
+                </ul>
+            </nav>
+
+            <button class="burger-menu" id="burger" aria-label="Меню">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1>Гармония<br>души и тела</h1>
+                <p>Откройте для себя мир йоги и медитации в нашем уютном пространстве. Практики для любого уровня
+                    подготовки.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Начать практику</a>
+                    <a href="#about" class="btn btn-text">Узнать больше →</a>
+                </div>
+            </div>
+            <div class="hero-image-placeholder">
+                <div class="placeholder-content">
+                    <span>Место для вашего фото<br>(Размер: 800x1000px)</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shape"></div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about section" id="about">
+        <div class="container about-container">
+            <div class="about-image-placeholder">
+                <div class="placeholder-content">
+                    <span>Место для фото интерьера или тренера<br>(Размер: 600x800px)</span>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2 class="section-title">Освободите свой ум <span>и укрепите тело</span></h2>
+                <p>Наша студия создана для того, чтобы каждый мог найти здесь место силы. Мы фокусируемся на правильной
+                    технике, осознанном дыхании и создании поддерживающего комьюнити.</p>
+                <ul class="features-list">
+                    <li>
+                        <div class="feature-icon">✨</div>
+                        <div>
+                            <h4>Опытный наставник</h4>
+                            <p>Сертифицированный преподаватель с опытом от 5 лет.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-icon">🌿</div>
+                        <div>
+                            <h4>Уютная атмосфера</h4>
+                            <p>Просторный зал и удобное расположение.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Занятия -->
+    <section class="classes section bg-light" id="classes">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Наши <span>направления</span></h2>
+                <p>Выберите практику, которая подходит именно вам в данный момент</p>
+            </div>
+
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div class="card-image-placeholder">
+                        <span>Фото (400x300px)</span>
+                    </div>
+                    <div class="class-card-content">
+                        <h3>Хатха-йога</h3>
+                        <p>Базовая практика для развития силы, гибкости и баланса. Идеально для начинающих и
+                            продолжающих.</p>
+                    </div>
+                </div>
+
+                <div class="class-card">
+                    <div class="card-image-placeholder">
+                        <span>Фото (400x300px)</span>
+                    </div>
+                    <div class="class-card-content">
+                        <h3>Виньяса Флоу</h3>
+                        <p>Динамичная практика в потоке, где движения синхронизированы с дыханием.</p>
+                    </div>
+                </div>
+
+                <div class="class-card">
+                    <div class="card-image-placeholder">
+                        <span>Фото (400x300px)</span>
+                    </div>
+                    <div class="class-card-content">
+                        <h3>Инь-йога</h3>
+                        <p>Мягкая, медитативная практика с долгим удержанием асан для глубокого расслабления.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и Карта -->
+    <section class="location-contact section" id="location">
+        <div class="container contact-container">
+            <!-- Карта -->
+            <div class="location-info">
+                <h2 class="section-title">Как нас <span>найти</span></h2>
+                <div class="address-card">
+                    <div class="address-item">
+                        <div class="icon-map-marker">📍</div>
+                        <div>
+                            <h4>Адрес студии:</h4>
+                            <p>г. Москва, ул. Цветочная, д. 15, этаж 3</p>
+                        </div>
+                    </div>
+                    <div class="address-item">
+                        <div class="icon-clock">🕒</div>
+                        <div>
+                            <h4>Время работы:</h4>
+                            <p>Пн-Вс: 07:00 - 22:00</p>
+                        </div>
+                    </div>
+                    <div class="address-item">
+                        <div class="icon-phone">📞</div>
+                        <div>
+                            <h4>Телефон:</h4>
+                            <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-placeholder">
+                    <!-- ВСТАВИТЬ КОД КАРТЫ (Яндекс.Карты / Google Maps) СЮДА -->
+                    <div class="placeholder-content">
+                        <span>Место для вставки iFrame карты<br>(Например от Яндекс Карт)</span>
+                        <a href="https://yandex.ru/map-widget/v1/" target="_blank" class="map-link-demo">Пример
+                            проложения маршрута</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Форма заявки -->
+            <div class="booking-form-wrapper" id="contact">
+                <div class="form-card">
+                    <h3>Записаться на занятие</h3>
+                    <p>Оставьте свои контактные данные, и мы свяжемся с вами для подбора времени.</p>
+
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 000-00-00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="level">Уровень подготовки</label>
+                            <select id="level" name="level">
+                                <option value="novice">Новичок (готов начать)</option>
+                                <option value="intermediate">Продолжающий</option>
+                                <option value="pro">Опытный практик</option>
+                            </select>
+                        </div>
+                        <!-- ВАЖНО: Ниже находится кнопка сабмита. Логику отправки (на webhook, Telegram, CRM) можно настроить в script.js -->
+                        <button type="submit" class="btn btn-primary btn-block">Жду звонка</button>
+                    </form>
+
+                    <div id="formSuccess" class="form-success hidden">
+                        <div class="success-icon">✓</div>
+                        <h4>Спасибо за заявку!</h4>
+                        <p>Мы свяжемся с вами в течение 15 минут.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">Yoga<span>Studio</span></div>
+            <p class="footer-text">© 2026 Yoga Studio. Все права защищены.<br> Гармония тела и разума.</p>
+            <div class="social-links">
+                <a href="#" class="social-placeholder">TG</a>
+                <a href="#" class="social-placeholder">VK</a>
+                <a href="#" class="social-placeholder">IG</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
