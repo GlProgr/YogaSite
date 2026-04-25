@@ -1,16 +1,19 @@
 /* --- Базовые переменные и стили --- */
 :root {
-    --color-primary: #7a8f7c; /* Шалфейный зеленый */
-    --color-primary-dark: #647866;
-    --color-background: #faf9f5; /* Мягкий кремовый */
-    --color-surface: #ffffff;
-    --color-text: #2c382e; /* Темно-зеленый/серый */
-    --color-text-light: #5f6b61;
-    --color-accent: #d8c3a5; /* Песочный/Теплый бежевый */
-    
+    --color-primary: #79745a;
+    /* Темный хаки */
+    --color-primary-dark: #625e48;
+    --color-background: #f5f1e6;
+    /* Темный бело-бежевый */
+    --color-surface: #faf8f5;
+    --color-text: #1e1e1c;
+    --color-text-light: #4a4943;
+    --color-accent: #c29d29;
+    /* Темное золото */
+
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Outfit', sans-serif;
-    
+
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     --shadow-sm: 0 4px 6px rgba(44, 56, 46, 0.05);
     --shadow-md: 0 8px 15px rgba(44, 56, 46, 0.08);
@@ -35,7 +38,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.2;
@@ -160,7 +166,7 @@ ul {
     z-index: 1000;
     padding: 20px 0;
     transition: var(--transition);
-    border-bottom: 1px solid rgba(0,0,0,0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .header.scrolled {
@@ -279,7 +285,7 @@ ul {
     font-size: 0.9rem;
     padding: 20px;
     border-radius: 10px;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .hero-shape {
@@ -288,7 +294,7 @@ ul {
     right: -5%;
     width: 50vw;
     height: 50vw;
-    background-color: rgba(122, 143, 124, 0.08);
+    background-color: rgba(121, 116, 90, 0.08);
     border-radius: 50%;
     z-index: 1;
 }
@@ -417,7 +423,8 @@ ul {
     margin-bottom: 2px;
 }
 
-.address-item p, .address-item a {
+.address-item p,
+.address-item a {
     font-weight: 500;
     color: var(--color-text);
 }
@@ -485,7 +492,7 @@ ul {
 .form-group select:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(122, 143, 124, 0.1);
+    box-shadow: 0 0 0 3px rgba(121, 116, 90, 0.1);
 }
 
 .form-success {
@@ -531,7 +538,7 @@ ul {
 }
 
 .footer-text {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
     margin-bottom: 30px;
 }
 
@@ -545,7 +552,7 @@ ul {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -561,17 +568,20 @@ ul {
 
 /* --- Адаптивность --- */
 @media (max-width: 992px) {
-    .hero-container, .about-container, .contact-container {
+
+    .hero-container,
+    .about-container,
+    .contact-container {
         flex-direction: column;
     }
-    
+
     .hero-image-placeholder {
         width: 100%;
         height: 400px;
         order: -1;
         border-radius: 20px;
     }
-    
+
     .hero {
         padding-top: 120px;
     }
@@ -579,7 +589,7 @@ ul {
     .hero-text h1 {
         font-size: 3rem;
     }
-    
+
     .about-image-placeholder {
         width: 100%;
         height: 400px;
@@ -623,19 +633,28 @@ ul {
     .burger-menu.active .burger-line:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
+
     .burger-menu.active .burger-line:nth-child(2) {
         opacity: 0;
     }
+
     .burger-menu.active .burger-line:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
