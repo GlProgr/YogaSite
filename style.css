@@ -266,8 +266,8 @@ ul {
 }
 
 .hero-image-placeholder {
-    flex: 1;
-    height: 600px;
+    flex: 0 1 400px;
+    height: 450px;
     background-color: #e8e3da;
     border-radius: 20px 100px 20px 20px;
     display: flex;
@@ -276,7 +276,6 @@ ul {
     position: relative;
     z-index: 2;
     box-shadow: var(--shadow-lg);
-    border: 1px dashed var(--color-primary);
 }
 
 .placeholder-content {
