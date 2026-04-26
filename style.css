@@ -187,10 +187,7 @@ ul {
     letter-spacing: 1px;
 }
 
-.logo span {
-    color: var(--color-primary);
-    font-style: italic;
-}
+/* Logo text is now solid color */
 
 .nav-list {
     display: flex;
@@ -531,10 +528,7 @@ ul {
     margin-bottom: 20px;
 }
 
-.footer-logo span {
-    color: var(--color-primary);
-    font-style: italic;
-}
+/* Footer logo text is now solid color */
 
 .footer-text {
     color: rgba(255, 255, 255, 0.6);

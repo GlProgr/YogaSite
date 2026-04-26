@@ -44,43 +44,49 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = {
                 name: document.getElementById('name').value,
                 phone: document.getElementById('phone').value,
-                level: document.getElementById('level').value,
+                direction: document.getElementById('direction').value,
             };
 
-            console.log('Данные формы для отправки:', formData);
+            const directionMap = {
+                'healthy-back': 'Йога для здоровой спины',
+                'hatha': 'Хатха йога',
+                'pregnant': 'Йога для беременных'
+            };
 
-            /* 
-            =====================================================================
-            ВСТАВИТЬ СВОЙ СЕРВИС ОБРАБОТКИ ЗАЯВОК ЗДЕСЬ
-            Пример отправки данных через fetch (на Webhook или ваш API):
-            
-            fetch('https://your-api-or-webhook-url.com/endpoint', {
+            const payload = {
+                Имя: formData.name,
+                Телефон: formData.phone,
+                Направление: directionMap[formData.direction] || formData.direction
+            };
+
+            // Отправляем данные через FormSubmit
+            fetch('https://formsubmit.co/ajax/namasteyoy@gmail.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(payload)
             })
-            .then(response => {
-                if(response.ok) { ... }
-            })
-            .catch(error => console.error('Ошибка:', error));
-            =====================================================================
-            */
+                .then(response => response.json())
+                .then(data => {
+                    // Показываем сообщение об успешной отправке
+                    bookingForm.classList.add('hidden');
+                    formSuccess.classList.remove('hidden');
 
-            // Для демонстрации показываем сообщение об успешной отправке
-            // и скрываем саму форму
-            bookingForm.classList.add('hidden');
-            formSuccess.classList.remove('hidden');
+                    // Очистка формы
+                    bookingForm.reset();
 
-            // Очистка формы
-            bookingForm.reset();
-
-            // Если нужно вернуть форму через какое-то время (опционально)
-            setTimeout(() => {
-                bookingForm.classList.remove('hidden');
-                formSuccess.classList.add('hidden');
-            }, 10000); // 10 секунд
+                    // Возвращаем форму через 10 секунд
+                    setTimeout(() => {
+                        bookingForm.classList.remove('hidden');
+                        formSuccess.classList.add('hidden');
+                    }, 10000);
+                })
+                .catch(error => {
+                    console.error('Ошибка:', error);
+                    alert('Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+                });
         });
     }
 
