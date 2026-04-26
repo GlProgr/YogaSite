@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- Бургер-меню ---
     const burger = document.getElementById('burger');
     const nav = document.getElementById('nav');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Липкий Хедер ---
     const header = document.getElementById('header');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Очистка формы
             bookingForm.reset();
-            
+
             // Если нужно вернуть форму через какое-то время (опционально)
             setTimeout(() => {
                 bookingForm.classList.remove('hidden');
@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            
+            if (targetId === '#') return;
+
             const targetElement = document.querySelector(targetId);
-            if(targetElement) {
+            if (targetElement) {
                 e.preventDefault();
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
